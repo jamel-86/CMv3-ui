@@ -1,0 +1,115 @@
+{
+  "number": 10,
+  "symbol": "NB",
+  "sellerFeeBasisPoints": 500,
+  "isMutable": true,
+  "isSequential": false,
+  "creators": [
+    {
+      "address": "87e6vkpzKqcDD373u2PQbYc2819B9PbCa3zE8ZP3GS1d",
+      "share": 100
+    }
+  ],
+  "uploadMethod": "bundlr",
+  "awsConfig": null,
+  "nftStorageAuthToken": null,
+  "shdwStorageAccount": null,
+  "pinataConfig": null,
+  "hiddenSettings": null,
+  "guards": {
+    "default": {},
+    "groups": [
+      {
+        "label": "public",
+        "guards": {
+          "mintLimit": {
+            "id": 1,
+            "limit": 1
+          },
+          "redeemedAmount": {
+            "maximum": 50
+          }
+        }
+      },
+      {
+        "label": "owner",
+        "guards": {
+          "addressGate": {
+            "address": "87e6vkpzKqcDD373u2PQbYc2819B9PbCa3zE8ZP3GS1d"
+          }
+        }
+      },
+      {
+        "label": "waoed",
+        "guards": {
+          "allowList": {
+            "merkleRoot": "069b52ddcfc2f7e08eebaacd8adf363c4c6c1e87ef0864bee9b9342afc58e686"
+          }
+        }
+      },
+      {
+        "label": "_x",
+        "guards": {
+          "nftBurn": {
+            "requiredCollection": "2cUj9sNUhJissuruAKfNuNPA8pSQfaKjg3GrcwfVn3cf"
+          }
+        }
+      },
+      {
+        "label": "_|",
+        "guards": {
+          "nftGate": {
+            "requiredCollection": "2cUj9sNUhJissuruAKfNuNPA8pSQfaKjg3GrcwfVn3cf"
+          }
+        }
+      },
+      {
+        "label": "_>",
+        "guards": {
+          "nftPayment": {
+            "requiredCollection": "2cUj9sNUhJissuruAKfNuNPA8pSQfaKjg3GrcwfVn3cf",
+            "destination": "87e6vkpzKqcDD373u2PQbYc2819B9PbCa3zE8ZP3GS1d"
+          }
+        }
+      },
+      {
+        "label": "solPmt",
+        "guards": {
+          "solPayment": {
+            "amount": 0.1,
+            "destination": "87e6vkpzKqcDD373u2PQbYc2819B9PbCa3zE8ZP3GS1d",
+            "value": 0.1
+          }
+        }
+      },
+      {
+        "label": "tknBrn",
+        "guards": {
+          "tokenBurn": {
+            "amount": 1,
+            "mint": "DYMs37sUJz65KmYa31Wzj2TKcTe5M5rhvdkKgcKWiEAs"
+          }
+        }
+      },
+      {
+        "label": "tknGte",
+        "guards": {
+          "tokenGate": {
+            "amount": 1,
+            "mint": "DYMs37sUJz65KmYa31Wzj2TKcTe5M5rhvdkKgcKWiEAs"
+          }
+        }
+      },
+      {
+        "label": "tknPmt",
+        "guards": {
+          "tokenPayment": {
+            "amount": 1,
+            "mint": "DYMs37sUJz65KmYa31Wzj2TKcTe5M5rhvdkKgcKWiEAs",
+            "destinationAta": "87e6vkpzKqcDD373u2PQbYc2819B9PbCa3zE8ZP3GS1d"
+          }
+        }
+      }
+    ]
+  }
+}
